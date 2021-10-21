@@ -10,11 +10,11 @@
              $conexion = new mysqli(HOSTNAME,USERNAME,CONTRASENA,NOMBREBD);
              $consultaTodos="SELECT * FROM empleados";
              $resultado=$conexion->query($consultaTodos);
-             while($fila = mysqli_fetch_array($resultado, MYSQLI_ASSOC))
+             while($fila = $resultado->fetch_assoc())
              {
                echo "<b>Nombre: ".$fila['nombre'] ."</b> DNI: ". $fila['dni']. 
-               "<a href='http://localhost/ejercicios/POOyBD(Empleados)/borrar.php?idEmpleado=".$fila['idEmpleado']."'> eliminar</a>
-               < a href='http://localhost/ejercicios/POOyBD(Empleados)/modificar.php?idEmpleado=".$fila['idEmpleado']."'> modificar</a>";
+               "<a href='borrar.php?idEmpleado=".$fila['idEmpleado']."'> eliminar</a>
+               <a href='modificar.php?idEmpleado=".$fila['idEmpleado']."'> modificar</a>";
                echo "<br/><br/>";
              }
         ?>
