@@ -12,8 +12,13 @@
           <input name="correo" type="text"  placeholder="nombre@gmail.com" size="30" /><br/><br/>
           <label for="telefono">Introduzca Telefono*   </label>
           <input name="telefono" type="text"  placeholder="924252521" size="30" /><br/><br/>
-          <input type = "submit" onclick="" name = "enviar" value="Enviar" />
+          <input type = "submit" onclick="" name = "enviar" value="Enviar" /><br />
+        </fieldset>
       </form>';
+      echo '<br />
+      <a href="monstrar.php">
+          <input type = "submit" onclick="" name = "Volver" value="Listado" id="boton"/>
+       </a>'; 
     }
 ?>
 <!DOCTYPE html>
@@ -59,7 +64,12 @@
                   <a href="alta.php">
                       <input type = "submit" onclick="" name = "Volver" value="Volver" id="boton"/>
                    </a>';
+                   echo '<br />
+                   <a href="monstrar.php">
+                       <input type = "submit" onclick="" name = "Volver" value="Listado" id="boton"/>
+                    </a>';   
             }
+            
         ?>
   </body>
 </html>

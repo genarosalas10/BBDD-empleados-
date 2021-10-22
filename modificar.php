@@ -54,7 +54,7 @@
               }
             echo '<br />
                   <a href="monstrar.php">
-                      <input type = "submit" onclick="" name = "Volver" value="Volver" id="boton"/>
+                      <input type = "submit" onclick="" name = "Volver" value="Volver"/>
                    </a>';
         ?>
   </body>

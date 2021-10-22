@@ -12,11 +12,15 @@
              $resultado=$conexion->query($consultaTodos);
              while($fila = $resultado->fetch_assoc())
              {
-               echo "<b>Nombre: ".$fila['nombre'] ."</b> DNI: ". $fila['dni']. 
-               "<a href='borrar.php?idEmpleado=".$fila['idEmpleado']."'> eliminar</a>
-               <a href='modificar.php?idEmpleado=".$fila['idEmpleado']."'> modificar</a>";
+               echo "<b>Nombre:</b> ".$fila['nombre'] ."<b> DNI: </b>". $fila['dni']. 
+               "  <a href='borrar.php?idEmpleado=".$fila['idEmpleado']."'>   <input type = 'submit' onclick=' name = 'borrar' value='Borrar' /></a>
+              <a href='modificar.php?idEmpleado=".$fila['idEmpleado']."'> <input type = 'submit' onclick=' name = 'modificar' value='Modificar' /></a>";
                echo "<br/><br/>";
              }
+             echo '<br />
+                   <a href="alta.php">
+                       <input type = "submit" onclick="" name = "alta" value="Alta" />
+                    </a>';
         ?>
   </body>
 </html>
