@@ -3,7 +3,6 @@
     {
         echo'<form action="alta.php" method="POST">
         <fieldset>
-          <legend>INTRODUCIR EMPLEADO</legend>
 			    <label for="nombre">Introduzca nombre*   </label>
           <input name="nombre" type="text"  placeholder="nombre" size="30" /><br/><br/>
           <label for="Dni">Introduzca DNI*   </label>
@@ -26,8 +25,19 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Alta</title>
+    <link rel=stylesheet href=css/estilo.css />
+    <link rel=stylesheet href=css/formulario.css />
+  </head>
+		<title>Monstrar</title>
 	</head>
   <body>
+  <header>
+        widmark S.L.
+    </header>
+    <nav></nav>
+    <div>
+      <aside></aside>
+      <main>
         <?php
             if(!($_POST))
             {
@@ -71,5 +81,7 @@
             }
             
         ?>
+      </main>
+    </div>
   </body>
 </html>

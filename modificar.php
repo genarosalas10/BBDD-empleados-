@@ -6,7 +6,6 @@
       $fila= $resultadoDni->fetch_assoc();
         echo"<form action='modificar.php' method='POST'>
         <fieldset>
-          <legend>EMPLEADO</legend>
 			    <label for='nombre'>Nombre*   </label>
           <input name='nombre' type='text'  value='".$fila['nombre']."' size='30' /><br/><br/>
           <label for='Dni'>DNI*   </label>
@@ -17,6 +16,7 @@
           <input name='telefono' type='text' value='".$fila['telefono']."'  size='30' /><br/><br/>
           <input name='idEmpleado' type='hidden' value='".$fila['idEmpleado']."' />
           <input type = 'submit' onclick=' name = 'enviar' value='Actualizar' /><br />
+        </fieldset>
       </form>";
     }
 ?>
@@ -24,9 +24,21 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Modificar</title>
+		<title>Alta</title>
+    <link rel=stylesheet href=css/estilo.css />
+    <link rel=stylesheet href=css/formulario.css />
+  </head>
+		<title>Moficiar</title>
 	</head>
   <body>
+  <header>
+        widmark S.L.
+    </header>
+    <nav>
+    </nav>
+    <div>
+      <aside></aside>
+      <main>
         <?php
             require_once("php/conf_bd.php");
             $conexion = new mysqli(HOSTNAME,USERNAME,CONTRASENA,NOMBREBD);
@@ -57,5 +69,7 @@
                       <input type = "submit" onclick="" name = "Volver" value="Volver"/>
                    </a>';
         ?>
+      </main>
+    </div>
   </body>
 </html>
